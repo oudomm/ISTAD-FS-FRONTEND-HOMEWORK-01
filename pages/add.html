@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add Project</title>
+    <script defer src="add.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>➕ Add Project</h1>
+      <nav>
+        <a href="../index.html">Projects</a> |
+        <a href="add.html">Add Project</a> |
+        <a href="status.html">Status</a>
+      </nav>
+    </header>
+
+    <main>
+      <form id="project-form">
+        <label>
+          Project Name:
+          <input type="text" name="name" required /> </label
+        ><br />
+        <label>
+          Git URL:
+          <input type="url" name="gitUrl" required /> </label
+        ><br />
+        <button type="submit">Add Project</button>
+      </form>
+      <p id="message"></p>
+    </main>
+  </body>
+</html>
