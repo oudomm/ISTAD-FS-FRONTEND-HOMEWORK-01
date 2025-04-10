@@ -10,7 +10,7 @@ const gitUrlInput = document.getElementById("gitUrl");
 const message = document.getElementById("message");
 
 // Load current project data
-fetch(`http://localhost:8080/api/projects/${id}`)
+fetch(`https://mini-deploy-manager-api.onrender.com/api/projects/${id}`)
   .then((res) => {
     if (!res.ok) throw new Error("Project not found.");
     return res.json();
@@ -33,7 +33,7 @@ form.addEventListener("submit", (e) => {
     gitUrl: gitUrlInput.value,
   };
 
-  fetch(`http://localhost:8080/api/projects/${id}`, {
+  fetch(`https://mini-deploy-manager-api.onrender.com/api/projects/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   const list = document.getElementById("project-list");
 
-  fetch("http://localhost:8080/api/projects")
+  fetch("https://mini-deploy-manager-api.onrender.com/api/projects")
     .then((res) => res.json())
     .then((projects) => {
       projects.forEach((project) => {
@@ -33,7 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function deleteProject(id) {
   if (confirm("Are you sure you want to delete this project?")) {
-    fetch(`http://localhost:8080/api/projects/${id}`, {
+    fetch(`https://mini-deploy-manager-api.onrender.com/api/projects/${id}`, {
       method: "DELETE",
     })
       .then((res) => {

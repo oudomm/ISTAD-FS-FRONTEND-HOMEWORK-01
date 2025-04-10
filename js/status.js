@@ -18,7 +18,7 @@ function showToast(message) {
 }
 
 function loadProject() {
-  fetch(`http://localhost:8080/api/projects/${id}`)
+  fetch(`https://mini-deploy-manager-api.onrender.com/api/projects/${id}`)
     .then((res) => {
       if (!res.ok) throw new Error("Project not found.");
       return res.json();
@@ -60,9 +60,12 @@ deployBtn.addEventListener("click", async () => {
   result.textContent = `⏳ Triggering deployment...`;
 
   try {
-    const res = await fetch(`http://localhost:8080/api/projects/${id}/deploy`, {
-      method: "POST",
-    });
+    const res = await fetch(
+      `https://mini-deploy-manager-api.onrender.com/api/projects/${id}/deploy`,
+      {
+        method: "POST",
+      }
+    );
 
     if (res.ok) {
       const msg = await res.text();

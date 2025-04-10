@@ -6,11 +6,14 @@ document
     const name = form.name.value;
     const gitUrl = form.gitUrl.value;
 
-    const res = await fetch("http://localhost:8080/api/projects", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, gitUrl }),
-    });
+    const res = await fetch(
+      "https://mini-deploy-manager-api.onrender.com/api/projects",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, gitUrl }),
+      }
+    );
 
     if (res.ok) {
       document.getElementById("message").textContent = "✅ Project added!";
