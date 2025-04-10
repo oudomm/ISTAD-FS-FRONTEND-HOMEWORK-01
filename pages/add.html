@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <h1>➕ Add Project</h1>
+      <h1>➕ Mini Deploy Manager - Add Project</h1>
       <nav>
         <a href="../index.html">Projects</a> |
         <a href="add.html">Add Project</a> |
@@ -16,18 +16,40 @@
     </header>
 
     <main>
-      <form id="project-form">
-        <label>
-          Project Name:
-          <input type="text" name="name" required /> </label
-        ><br />
-        <label>
-          Git URL:
-          <input type="url" name="gitUrl" required /> </label
-        ><br />
-        <button type="submit">Add Project</button>
-      </form>
-      <p id="message"></p>
+      <section>
+        <h2>Project Details</h2>
+        <form id="project-form">
+          <table>
+            <tr>
+              <td>&nbsp;<label for="name">Project Name:</label>&nbsp;</td>
+              <td>
+                &nbsp;<input type="text" name="name" id="name" required />&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;<label for="gitUrl">Git URL:</label>&nbsp;</td>
+              <td>
+                &nbsp;<input
+                  type="url"
+                  name="gitUrl"
+                  id="gitUrl"
+                  required
+                />&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center">
+                &nbsp;<button type="submit">Add Project</button>&nbsp;
+              </td>
+            </tr>
+          </table>
+        </form>
+        <p id="message"></p>
+      </section>
     </main>
+
+    <footer>
+      <p>&copy;&nbsp;2025&nbsp;Mini&nbsp;Deploy&nbsp;Manager</p>
+    </footer>
   </body>
 </html>

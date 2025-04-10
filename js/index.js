@@ -5,19 +5,26 @@ window.addEventListener("DOMContentLoaded", () => {
     .then((res) => res.json())
     .then((projects) => {
       projects.forEach((project) => {
-        const li = document.createElement("li");
-        li.innerHTML = `
-          <strong>${project.name}</strong> (<a href="${
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+          <td>&nbsp;${project.name}&nbsp;</td>
+          <td>&nbsp;<a href="${project.gitUrl}" target="_blank">${
           project.gitUrl
-        }" target="_blank">Git URL</a>)<br/>
-          Status: ${project.deploymentStatus || "Unknown"}<br/>
-          <a href="status.html?id=${project.id}">View Details</a>
+        }</a>&nbsp;</td>
+          <td>&nbsp;${project.deploymentStatus || "Unknown"}&nbsp;</td>
+          <td>&nbsp;<a href="./pages/status.html?id=${
+            project.id
+          }">View Details</a>&nbsp;</td>
         `;
-        list.appendChild(li);
+
+        list.appendChild(tr);
       });
     })
     .catch((err) => {
-      list.innerHTML = "<li>Error loading projects.</li>";
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td colspan="4">❌ Error loading projects.</td>`;
+      list.appendChild(tr);
       console.error(err);
     });
 });

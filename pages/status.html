@@ -5,7 +5,6 @@
     <title>Deployment Status</title>
     <script defer src="../js/status.js"></script>
   </head>
-
   <body>
     <header>
       <h1>📊 Deployment Status</h1>
@@ -17,12 +16,20 @@
     </header>
 
     <main>
-      <div id="project-details">
-        <!-- Loaded via JS -->
-      </div>
-      <button id="deploy-btn">Trigger Deployment</button>
-      <p id="result"></p>
+      <section>
+        <h2>Project Info</h2>
+        <table id="project-details">
+          <!-- Project details will be inserted here by JS -->
+        </table>
+        <br />
+        <button id="deploy-btn">Trigger Deployment</button>
+        <p id="result"></p>
+      </section>
     </main>
     <div id="toast"></div>
+
+    <footer>
+      <p>&copy; 2025 Mini Deploy Manager</p>
+    </footer>
   </body>
 </html>

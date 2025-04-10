@@ -33,13 +33,13 @@ function loadProject() {
         <p><strong>Deployed URL:</strong> <a href="${
           project.deployedUrl
         }" target="_blank">${project.deployedUrl || "Not yet deployed"}</a></p>
-        <p><a href="index.html">← Back to Project List</a></p>
+        <p><a href="../index.html">← Back to Project List</a></p>
       `;
     })
     .catch((err) => {
       details.innerHTML = `
         <p>❌ ${err.message}</p>
-        <p><a href="index.html">← Go back to project list</a></p>
+        <p><a href="../index.html">← Go back to project list</a></p>
       `;
       deployBtn.style.display = "none";
     });
@@ -48,7 +48,7 @@ function loadProject() {
 if (!id) {
   details.innerHTML = `
     <p>❌ No project ID provided.</p>
-    <p><a href="index.html">← Go back to project list</a></p>
+    <p><a href="../index.html">← Go back to project list</a></p>
   `;
   deployBtn.style.display = "none";
 } else {

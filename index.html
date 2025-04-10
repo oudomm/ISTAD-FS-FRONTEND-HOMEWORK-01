@@ -9,17 +9,27 @@
     <header>
       <h1>🚀 Mini Deploy Manager</h1>
       <nav>
-        <a href="index.html">Projects</a> |
-        <a href="./pages/add.html">Add Project</a> |
+        <a href="index.html">Projects</a>&nbsp;|&nbsp;
+        <a href="./pages/add.html">Add Project</a>&nbsp;|&nbsp;
         <a href="./pages/status.html">Status</a>
       </nav>
     </header>
 
     <main>
       <h2>All Projects</h2>
-      <ul id="project-list">
-        <!-- Projects will be loaded here -->
-      </ul>
+      <table id="project-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Git URL</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="project-list">
+          <!-- Projects will be loaded here dynamically -->
+        </tbody>
+      </table>
     </main>
 
     <footer>
