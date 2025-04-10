@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Project</title>
+    <script defer src="../js/edit.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>🛠️ Edit Project</h1>
+      <nav>
+        <a href="../index.html">Projects</a>&nbsp;|&nbsp;
+        <a href="./add.html">Add Project</a>&nbsp;|&nbsp;
+        <a href="./about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Update Project Info</h2>
+      <form id="edit-form">
+        <table>
+          <tr>
+            <td><label for="name">Project Name:</label></td>
+            <td>
+              &nbsp;<input type="text" id="name" name="name" required />&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td><label for="gitUrl">Git URL:</label></td>
+            <td>
+              &nbsp;<input
+                type="url"
+                id="gitUrl"
+                name="gitUrl"
+                required
+              />&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              &nbsp;<button type="submit">Update Project</button>&nbsp;
+            </td>
+          </tr>
+        </table>
+      </form>
+      <p id="message">&nbsp;</p>
+    </main>
+
+    <footer>
+      <p>&copy;&nbsp;2025&nbsp;Mini&nbsp;Deploy&nbsp;Manager</p>
+    </footer>
+  </body>
+</html>

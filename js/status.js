@@ -57,7 +57,7 @@ if (!id) {
 
 deployBtn.addEventListener("click", async () => {
   if (!id) return;
-  result.textContent = "⏳ Triggering deployment...";
+  result.textContent = `⏳ Triggering deployment...`;
 
   try {
     const res = await fetch(`http://localhost:8080/api/projects/${id}/deploy`, {
@@ -66,15 +66,15 @@ deployBtn.addEventListener("click", async () => {
 
     if (res.ok) {
       const msg = await res.text();
-      result.textContent = "✅ " + msg;
-      showToast("🚀 Deployment triggered!");
+      result.textContent = msg;
+      showToast(`🚀 Deployment triggered!`);
       loadProject(); // Auto-refresh the status
     } else {
-      result.textContent = "❌ Failed to trigger deployment.";
-      showToast("❌ Deployment failed!", false);
+      result.textContent = `❌ Failed to trigger deployment.`;
+      showToast(`❌ Deployment failed!`, false);
     }
   } catch (err) {
-    result.textContent = "❌ Error: " + err.message;
-    showToast("❌ " + err.message, false);
+    result.textContent = `❌ Error: ` + err.message;
+    showToast(`❌ ` + err.message, false);
   }
 });
